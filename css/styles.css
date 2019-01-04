@@ -56,6 +56,7 @@ nav {
   text-align:center;
 }
 nav h1 {
+  padding-top: 20px;
   margin: auto;
 }
 nav h1 a {
@@ -99,6 +100,7 @@ nav h1 a {
 }
 /* ====================== Map ====================== */
 #map {
+  display: block;
   height: 400px;
   width: 100%;
   background-color: #ccc;
@@ -106,11 +108,13 @@ nav h1 a {
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
-  height: 50px;
+  height: 90px;
   background-color: #3397DB;
   align-items: center;
 }
 .filter-options h2 {
+  display: block;
+  padding-top: 15px;
   color: white;
   font-size: 1rem;
   font-weight: normal;
@@ -131,6 +135,9 @@ nav h1 a {
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; 
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
@@ -218,7 +225,7 @@ nav h1 a {
   line-height: 1.1;
 }
 #restaurant-img {
-	width: 90%;
+  width: 90%;
 }
 #restaurant-address {
   font-size: 12pt;
@@ -258,7 +265,7 @@ nav h1 a {
 }
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
@@ -273,3 +280,20 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+
+/* ====================== Media Query ====================== */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and (max-width: 1200px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (max-width: 992px) {} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (max-width: 768px) {} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (max-width: 600px) {} 
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (min-width: 600px) {} 
