@@ -152,7 +152,7 @@ nav h1 a {
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: left;
-  width: 270px;
+  width: 300px;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -212,12 +212,12 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 46%;
 }
 #restaurant-name {
   color: #f18200;
   font-family: Arial,sans-serif;
-  font-size: 20pt;
+  font-size: 18pt;
   font-weight: 200;
   letter-spacing: 0;
   margin: 15px 0 30px;
@@ -254,7 +254,7 @@ nav h1 a {
 }
 #reviews-container h2 {
   color: #f58500;
-  font-size: 24pt;
+  font-size: 22pt;
   font-weight: 300;
   letter-spacing: -1px;
   padding-bottom: 1pt;
@@ -275,8 +275,21 @@ nav h1 a {
   width: 85%;
 }
 #reviews-list li p {
-  margin: 0 0 10px;
+  margin: 10px 0 10px 0;
 }
+.review-name {
+  font-size: 20px;
+  color: #0c9f7e;
+  font-weight: bold
+}
+.review-date {
+  color: #666;
+  font-style: italic
+}
+.review-rating {
+  font-size: 16px;
+}
+.review-comments {}
 #restaurant-hours td {
   color: #666;
 }
@@ -284,16 +297,22 @@ nav h1 a {
 /* ====================== Media Query ====================== */
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media screen and (max-width: 1200px) {}
+
+/* @media screen and (max-width: 1200px) {} */
+@media screen and (max-width: 1245px) {
+  #restaurants-list li {width: 380px};
+}
+@media screen and (max-width: 1000px) {
+  #restaurants-list li {width: 540px}
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media screen and (max-width: 992px) {} 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media screen and (max-width: 768px) {} 
+@media screen and (max-width: 768px) {
+  #restaurants-list li {width: 680px} 
+} 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media screen and (max-width: 600px) {} 
-
-/* Extra small devices (phones, 600px and down) */
-@media screen and (min-width: 600px) {} 
