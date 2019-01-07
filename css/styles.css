@@ -2,7 +2,7 @@
 /* CSS Document */
 
 body,td,th,p{
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	font-size: 10pt;
 	color: #333;
 	line-height: 1.5;
@@ -29,7 +29,8 @@ a img{
 	border: none 0px #fff;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  ;
   margin: 0 0 20px;
 }
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -147,7 +148,7 @@ nav h1 a {
 #restaurants-list li {
   background-color: #fff;
   border: 2px solid #ccc;
-  font-family: Arial,sans-serif;
+  /* font-family: Arial,sans-serif; */
   margin: 15px;
   min-height: 380px;
   padding: 0 30px 25px;
@@ -164,7 +165,7 @@ nav h1 a {
 }
 #restaurants-list li h1 {
   color: #f18200;
-  font-family: Arial,sans-serif;
+  /* font-family: Arial,sans-serif; */
   font-size: 14pt;
   font-weight: 200;
   letter-spacing: 0;
@@ -216,19 +217,20 @@ nav h1 a {
 }
 #restaurant-name {
   color: #f18200;
-  font-family: Arial,sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 18pt;
-  font-weight: 200;
+  font-weight: 800;
   letter-spacing: 0;
   margin: 15px 0 30px;
   text-transform: uppercase;
   line-height: 1.1;
+  text-shadow: 2px 2px 4px #252831;
 }
 #restaurant-img {
   width: 90%;
 }
 #restaurant-address {
-  font-size: 12pt;
+  font-size: 14pt;
   margin: 10px 0px;
 }
 #restaurant-cuisine {
@@ -290,24 +292,86 @@ nav h1 a {
   font-size: 16px;
 }
 .review-comments {}
+
 #restaurant-hours td {
+  font-size: 13px;
   color: #666;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.resto-op-days {
+  text-align: right;
+  font-weight: bold;
+}
+.resto-op-hours {
+  text-align: left;
+  padding-left: 15px;
 }
 
 /* ====================== Media Query ====================== */
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 
-/* @media screen and (max-width: 1200px) {} */
-@media screen and (max-width: 1245px) {
+@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1245px) { */
   #restaurants-list li {width: 380px};
+  
+  ul#breadcrumb {width: 100%} /* BAR DOES NOT DISPLAY 100% */
+
+  #maincontent {
+    display: flex;
+  }
+
+  .inside #map-container {
+    position: absolute;
+    right: 60px;
+    top: 130px;
+    width: 90%;
+    height: 24%;
+  }
+
+  #restaurant-container {
+    border: none;
+    margin-top: 430px 
+  } 
+  
+  #reviews-container {
+    border: none;
+    margin-top: 540px 
+  }
+
+  .inside #footer {width: 100%}
+  
+  .leaflet-top, .leaflet-bottom { /* INDEX IS STILL OVER BAR */
+    position: absolute;
+    z-index: 999;
+  }
 }
+
 @media screen and (max-width: 1000px) {
   #restaurants-list li {width: 540px}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media screen and (max-width: 992px) {} 
+@media screen and (max-width: 950px) {
+
+
+/* 
+  .inside #map-container {
+    position: absolute;
+    right: 70px;
+    top: 130px;
+    width: 90%;
+    height: 20%;
+  }
+
+  #reviews-container, #restaurant-container {
+    padding: 30px 40px 80px;
+    margin: auto;
+    widows: 70%;
+  }
+*/
+} 
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media screen and (max-width: 768px) {

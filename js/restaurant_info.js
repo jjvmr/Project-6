@@ -93,13 +93,15 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
   const hours = document.getElementById('restaurant-hours');
   for (let key in operatingHours) {
     const row = document.createElement('tr');
-
+    
     const day = document.createElement('td');
-    day.innerHTML = key;
+    day.innerHTML = `${key} :`;
+    day.classList.add('resto-op-days')
     row.appendChild(day);
-
+    
     const time = document.createElement('td');
     time.innerHTML = operatingHours[key];
+    time.classList.add('resto-op-hours')
     row.appendChild(time);
 
     hours.appendChild(row);
