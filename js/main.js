@@ -1,3 +1,13 @@
+if(navigator.serviceWorker){
+  navigator.serviceWorker.register('./sw.js')
+  .then(() =>{
+      console.log("service worker installed");
+  })
+  .catch(()=>{
+      console.log('service worker did not install')
+  })
+} 
+
 let restaurants,
   neighborhoods,
   cuisines
@@ -186,11 +196,3 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 
 } 
-
-if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("sw.js")
-  .then(() => {
-    console.log('Service Worker Installed')
-  })
-  .catch(() => console.log('Service Worker Did Not Install'))
-}

@@ -20,7 +20,8 @@ self.addEventListener('install', event => {
       return cache.addAll(
         [ 
           '/css/styles.css',
-          '/data/restaurants.json',
+          './data/restaurants.json',
+          '/manifest.json',
           '/img/1.jpg',
           '/img/2.jpg',
           '/img/3.jpg',
@@ -31,11 +32,15 @@ self.addEventListener('install', event => {
           '/img/8.jpg',
           '/img/9.jpg',
           '/img/10.jpg',
+          '/img/spoon-256.png',
+          '/img/knife-128.png',
+          '/img/plate-144.png',
+          '/img/bowl-256.png',
           '/js/main.js',
-          '/js/main.js',
+          '/js/dbhelper.js',
           '/js/restaurant_info.js',
-          '/index.html',
-          '/restaurant.html',
+          'index.html',
+          './restaurant.html',
           '/'
         ]
       )
@@ -43,10 +48,15 @@ self.addEventListener('install', event => {
   )
 });
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request)
+    caches.open(mySiteCache).then(cache => {
+      return cache.match(event.request).then(response => {
+        return response || fetch(event.request).then(response => {
+          cache.put(event.request, response.clone());
+          return response;
+        });
+      });
     })
-  )
-})
+  );
+});
