@@ -1,10 +1,10 @@
 if(navigator.serviceWorker){
   navigator.serviceWorker.register('./sw.js')
   .then(() =>{
-      console.log("service worker installed");
+      console.log("Service Worker Installed");
   })
   .catch(()=>{
-      console.log('service worker did not install')
+      console.log('Service Worker did not Install')
   })
 } 
 

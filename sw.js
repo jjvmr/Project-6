@@ -50,7 +50,7 @@ self.addEventListener('install', event => {
 
 self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.open(mySiteCache).then(cache => {
+    caches.open(staticCache).then(cache => {
       return cache.match(event.request).then(response => {
         return response || fetch(event.request).then(response => {
           cache.put(event.request, response.clone());
