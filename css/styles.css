@@ -13,7 +13,6 @@ body {
 	position:relative;
 }
 ul, li {
-	/* font-family: Arial, Helvetica, sans-serif; */
 	font-size: 12pt;
 	color: #333;
 }
@@ -125,7 +124,6 @@ nav h1 a {
 .filter-options select {
   background-color: white;
   border: 1px solid #fff;
-  /* font-family: Arial,sans-serif; */
   font-size: 11pt;
   height: 35px;
   letter-spacing: 0;
@@ -149,7 +147,6 @@ nav h1 a {
   background-color: #fff;
   border: 2px solid #ccc;
   box-shadow: 0 3px 10px #9e9e9e;
-  /* font-family: Arial,sans-serif; */
   margin: 15px;
   min-height: 380px;
   padding: 0 30px 25px;
@@ -166,7 +163,6 @@ nav h1 a {
 }
 #restaurants-list li h1 {
   color: #f18200;
-  /* font-family: Arial,sans-serif; */
   font-size: 14pt;
   font-weight: 200;
   letter-spacing: 0;
@@ -293,7 +289,6 @@ nav h1 a {
 .review-rating {
   font-size: 16px;
 }
-.review-comments {}
 
 #restaurant-hours td {
   font-size: 13px;
@@ -310,13 +305,14 @@ nav h1 a {
   padding-left: 15px;
 }
 
+
 /* ====================== Media Query ====================== */
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media screen and (max-width: 1200px) {
-/* @media screen and (max-width: 1245px) { */
   #restaurants-list li {width: 380px};
   ul#breadcrumb {width: 100%}
+
   #maincontent {
     display: flex;
     width: 100%;
@@ -337,10 +333,9 @@ nav h1 a {
   }
 
   .inside #footer, #restaurant-cuisine, #restaurant-img {width: 100%}
-
   #restaurant-name {font-size: 25pt}
-  
   .leaflet-container {z-index: 999}
+
   .inside #footer {
     position: initial;
     width: 45%;
@@ -358,9 +353,7 @@ nav h1 a {
     background-color: #252831;
   }
 
-  #breadcrumb li a {
-    color: #2d9eff;
-  }
+  #breadcrumb li a {color: #2d9eff}
   
   #breadcrumb li {
     color: white;
@@ -423,9 +416,7 @@ nav h1 a {
 @media screen and (max-width: 768px) {
   #restaurants-list li {width: 75%} 
   #restaurant-container, #reviews-container {width: 90%}
-  #reviews-container {
-    padding: 10px 35px 35px 40px;
-  }
+  #reviews-container {padding: 10px 35px 35px 40px}
   nav h1 {margin-left: 290px}
   #breadcrumb li {font-size: 10pt}
   #breadcrumb {width: 20%}
@@ -433,17 +424,13 @@ nav h1 a {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media screen and (max-width: 680px) {  
-  .inside #map-container {
-    top: 100px
-  }
-  #restaurant-container {}
-  #reviews-container {
-    padding-left: 0;
-  }
+  .inside #map-container {top: 100px}
+  #reviews-container {padding-left: 0}
   #restaurant-container, #reviews-container {width: 80%}
   nav {height: 100px }
   nav h1 {margin: auto}
   #breadcrumb li {font-size: 10pt}
+
   #breadcrumb {
     width: 50%;
     top: 65px;
