@@ -17,15 +17,10 @@ self.addEventListener('activate', event => {
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(staticCache).then(cache => {
-      return cache.addAll( /
+      return cache.addAll(
         [ 
-          '/index.html',
-          '/restaurant.html',
-          '/data/restaurants.json',
-          '/js/main.js',
-          '/js/main.js',
-          '/js/restaurant_info.js',
           '/css/styles.css',
+          '/data/restaurants.json',
           '/img/1.jpg',
           '/img/2.jpg',
           '/img/3.jpg',
@@ -36,6 +31,11 @@ self.addEventListener('install', event => {
           '/img/8.jpg',
           '/img/9.jpg',
           '/img/10.jpg',
+          '/js/main.js',
+          '/js/main.js',
+          '/js/restaurant_info.js',
+          '/index.html',
+          '/restaurant.html',
           '/'
         ]
       )
