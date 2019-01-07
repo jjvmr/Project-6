@@ -375,7 +375,7 @@ nav h1 a {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media screen and (max-width: 768px) {
-  #restaurants-list li {width: 680px} 
+  #restaurants-list li {width: 80%} 
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
